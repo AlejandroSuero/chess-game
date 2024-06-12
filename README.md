@@ -23,9 +23,9 @@ A simple chess game written in C++ using SDL2.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/AlejandroSuero/chess-game.git
+git clone --recursive https://github.com/AlejandroSuero/chess-game.git
 # or
-gh repo clone AlejandroSuero/chess-game
+gh repo clone AlejandroSuero/chess-game -- --recursive
 ```
 
 2. Copy the **sdl2** cmake files in their respective folders:
