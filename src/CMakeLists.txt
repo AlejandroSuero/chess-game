@@ -8,6 +8,6 @@ if (WIN32)
 endif (WIN32)
 
 # add_executable(Chess Main.cpp ${CHESS_SOURCES})
-add_executable(Chess Main.cpp)
+add_executable(${PROJECT_NAME} Main.cpp)
 
-target_link_libraries(Chess ${SLD2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${SLD2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
