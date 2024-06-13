@@ -79,9 +79,12 @@ void SDL_Handler::handle_events()
       case SDL_WINDOWEVENT_SIZE_CHANGED:
         m_win_width = m_event.window.data1;
         m_win_height = m_event.window.data2;
-        if (m_win_height - BOARD_HEIGHT < 0 || m_win_width - BOARD_WIDTH < 0)
+        if (m_win_height - BOARD_HEIGHT < 0)
         {
           m_win_height = BOARD_HEIGHT;
+        }
+        else if (m_win_width - BOARD_WIDTH < 0)
+        {
           m_win_width = BOARD_WIDTH;
         }
         SDL_SetWindowSize(m_window, m_win_width, m_win_height);
