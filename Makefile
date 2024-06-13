@@ -44,6 +44,18 @@ lint:
 	@$(call style_calls, "Done")
 .PHONY: lint
 
+spell:
+	@$(call style_calls, "Running codespell")
+	@codespell --quiet-level=2 --check-hidden -S .git -S .gitignore -S .github -S build -S cmake -S lib -S include -L .
+	@$(call style_calls, "Done")
+.PHONY: spell
+
+fix-spell:
+	@$(call style_calls, "Running codespell")
+	@codespell --quiet-level=2 --check-hidden -S .git -S .gitignore -S .github -S build -S cmake -S lib -S include -L . --write-changes
+	@$(call style_calls, "Done")
+.PHONY: fix-spell
+
 run:
 	@$(call style_calls, "Running ${BINARY}")
 	@./${BINARY}
@@ -53,10 +65,12 @@ run:
 help:
 	@echo "Usage: make [target]"
 	@echo "Targets:"
-	@echo "         all:     build the projecti and clean the build directory"
-	@echo "         build:   build the project"
-	@echo "         clean:   clean the build directory"
-	@echo "         lint:    run clang-format"
-	@echo "         run:     run the project"
-	@echo "         help:    show this help"
+	@echo "         all:         build the projecti and clean the build directory"
+	@echo "         build:       build the project"
+	@echo "         clean:       clean the build directory"
+	@echo "         lint:        run clang-format"
+	@echo "         run:         run the binary"
+	@echo "         spell:       run codespell"
+	@echo "         fix-spell:   run codespell and fix the spelling mistakes"
+	@echo "         help:        show this help"
 .PHONY: help
