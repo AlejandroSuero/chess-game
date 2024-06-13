@@ -1,7 +1,8 @@
-#include <iostream>
+#include "ChessLoop.h"
+#include <SDL.h>
 
-int main()
+int main(int argc, char *argv[])
 {
-  std::cout << "Hello, World!" << std::endl;
-  return 0;
+  ChessLoop chessLoop;
+  chessLoop.run();
 }
