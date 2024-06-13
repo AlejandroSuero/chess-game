@@ -31,8 +31,8 @@ gh repo clone AlejandroSuero/chess-game -- --recursive
 2. Copy the **sdl2** cmake files in their respective folders:
 
 ```bash
-cp -r /path/to/SDL2/sdl2-config.cmake /path/to/chess-game/sdl2-config.cmake
-cp -r /path/to/SDL2_Image/sdl2-image-config.cmake /path/to/chess-game/sdl2-image-config.cmake
+cp /path/to/chess-game/sdl2-config.cmake /path/to/SDL2/sdl2-config.cmake
+cp /path/to/chess-game/sdl2-image-config.cmake /path/to/SDL2_image/sdl2-image-config.cmake
 ```
 
 3. Build the project
@@ -51,6 +51,10 @@ You can also run it from the command line using the following command after buil
 ```bash
 make run
 ```
+
+> [!NOTE]
+>
+> You can also run `make help` to see all the available commands.
 
 [stars-shield]: https://img.shields.io/github/stars/AlejandroSuero/chess-game.svg?style=for-the-badge
 [stars-url]: https://github.com/AlejandroSuero/chess-game/stargazers
