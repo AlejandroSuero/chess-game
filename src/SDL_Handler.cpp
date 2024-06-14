@@ -20,20 +20,20 @@ void SDL_Handler::clean_up()
 
 SDL_Handler::~SDL_Handler() { clean_up(); }
 
-void SDL_Handler::render_background(int win_width, int win_height)
+void SDL_Handler::render_background()
 
 {
   SDL_SetRenderDrawColor(m_renderer, 0, 0xFF, 0, SDL_ALPHA_OPAQUE);
   SDL_RenderClear(m_renderer);
-  render_board(win_width, win_height);
+  render_board();
   SDL_RenderPresent(m_renderer);
 }
 
-void SDL_Handler::render_board(int win_width, int win_height)
+void SDL_Handler::render_board()
 {
   // keep board on screen no matter the window size
-  int board_width = win_width > BOARD_WIDTH ? BOARD_WIDTH : win_width;
-  int board_height = win_height > BOARD_HEIGHT ? BOARD_HEIGHT : win_height;
+  int board_width = m_win_width > BOARD_WIDTH ? BOARD_WIDTH : m_win_width;
+  int board_height = m_win_height > BOARD_HEIGHT ? BOARD_HEIGHT : m_win_height;
   for (int file = 0; file < 8; file++)
   {
     for (int rank = 0; rank < 8; rank++)
@@ -52,8 +52,8 @@ void SDL_Handler::render_board(int win_width, int win_height)
         square_size = board_height / 8;
 
 #pragma region draw squares
-      int offset_x = (win_width / 2) - (board_width / 2);
-      int offset_y = (win_height / 2) - (board_height / 2);
+      int offset_x = (m_win_width / 2) - (board_width / 2);
+      int offset_y = (m_win_height / 2) - (board_height / 2);
       rect.x = offset_x + (square_size)*file;
       rect.y = offset_y + (square_size)*rank;
       rect.w = square_size;
@@ -103,7 +103,7 @@ void SDL_Handler::handle_events()
       break;
     }
   }
-  render_background(m_win_width, m_win_height);
+  render_background();
 };
 
 void SDL_Handler::init()

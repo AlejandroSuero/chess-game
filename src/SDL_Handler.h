@@ -9,8 +9,8 @@ public:
   ~SDL_Handler();
   void init();
   void clean_up();
-  void render_background(int width, int height);
-  void render_board(int win_width, int win_height);
+  void render_background();
+  void render_board();
   void handle_events();
 
 public:
