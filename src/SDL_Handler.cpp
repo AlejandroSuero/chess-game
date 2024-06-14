@@ -64,9 +64,26 @@ void SDL_Handler::render_board()
   }
 }
 
+#if defined(__APPLE__) || defined(__MACH__)
+Uint32 SDL_Handler::m_time_left()
+{
+  Uint32 now;
+  now = SDL_GetTicks();
+  if (m_next_time < now)
+    return 0;
+  else
+    return m_next_time - now;
+}
+#endif
+
 void SDL_Handler::handle_events()
 {
+#if defined(__APPLE__) || defined(__MACH__) // MacOS incompatible with SDL_WaitEvent
+  m_next_time = SDL_GetTicks() + 60;
   while (SDL_PollEvent(&m_event))
+#else
+  while (SDL_WaitEvent(&m_event))
+#endif
   {
     switch (m_event.type)
     {
@@ -100,6 +117,9 @@ void SDL_Handler::handle_events()
       default:
         break;
       }
+#if defined(__APPLE__) || defined(__MACH__)
+      SDL_Delay(m_time_left());
+#endif
       break;
     }
   }

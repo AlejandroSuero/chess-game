@@ -26,4 +26,8 @@ private:
   const int BOARD_HEIGHT = 640;
   int m_win_width = SCREEN_WIDTH;
   int m_win_height = SCREEN_HEIGHT;
+#if defined(__APPLE__) || defined(__MACH__)
+  Uint32 m_time_left();
+  Uint32 m_next_time = SDL_GetTicks() + 60;
+#endif
 };
