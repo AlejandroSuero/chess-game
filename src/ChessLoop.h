@@ -1,5 +1,6 @@
 #pragma once
 
-namespace Chess {
-  void Run();
+namespace Chess
+{
+void Run();
 }
