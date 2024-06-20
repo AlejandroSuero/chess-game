@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          sudo apt update
-          sudo apt upgrade
-          sudo apt install clang-format
-      - run: clang-format --version
-      - run: |
-          make lint
+      - name: Run clang-format style check for C/C++ programs.
+        uses: jidicula/clang-format-action@v4
+        with:
+          clang-format-version: "18"
+          check-path: "src"
+          fallback-style: "LLVM"
