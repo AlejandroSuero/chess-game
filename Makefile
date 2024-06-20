@@ -44,6 +44,12 @@ lint:
 	@$(call style_calls, "Done")
 .PHONY: lint
 
+format:
+	@$(call style_calls, "Running clang-format")
+	@clang-format -Werror -style=file -i src/*.cpp
+	@$(call style_calls, "Done")
+.PHONY: format
+
 spell:
 	@$(call style_calls, "Running codespell")
 	@codespell --quiet-level=2 --check-hidden -S .git -S .gitignore -S .github -S build -S cmake -S lib -S include -L .
