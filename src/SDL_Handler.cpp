@@ -29,7 +29,7 @@ void SDL_Handler::render_background()
 
 {
   SDL_RenderClear(m_renderer);
-  SDL_SetRenderDrawColor(m_renderer, 0, 0xFF, 0, SDL_ALPHA_OPAQUE);
+  SDL_SetRenderDrawColor(m_renderer, 32, 32, 32, SDL_ALPHA_OPAQUE);
   SDL_RenderClear(m_renderer);
   render_board();
   SDL_RenderPresent(m_renderer);
@@ -52,7 +52,6 @@ void SDL_Handler::render_texture(SDL_Texture *texture, int t_x, int t_y, int x,
 
 void SDL_Handler::render_board()
 {
-  m_texture = load_texture(PIECES_PATH);
   // keep board on screen no matter the window size
   int board_width = m_win_width > m_BOARD_SIZE ? m_BOARD_SIZE : m_win_width;
   int board_height = m_win_height > m_BOARD_SIZE ? m_BOARD_SIZE : m_win_height;
@@ -62,9 +61,9 @@ void SDL_Handler::render_board()
     {
       bool is_white = (file + rank) % 2 == 0;
       if (is_white)
-        SDL_SetRenderDrawColor(m_renderer, 197, 172, 170, SDL_ALPHA_OPAQUE);
+        SDL_SetRenderDrawColor(m_renderer, 236, 210, 183, SDL_ALPHA_OPAQUE);
       else
-        SDL_SetRenderDrawColor(m_renderer, 89, 44, 42, SDL_ALPHA_OPAQUE);
+        SDL_SetRenderDrawColor(m_renderer, 159, 106, 91, SDL_ALPHA_OPAQUE);
       SDL_Rect rect;
 
 #pragma region draw squares
@@ -254,6 +253,13 @@ void SDL_Handler::init()
     SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,
                  "Renderer could not be created! SDL_Error: %s",
                  SDL_GetError());
+    return;
+  }
+  m_texture = load_texture(PIECES_PATH);
+  if (m_texture == nullptr)
+  {
+    SDL_LogError(SDL_LOG_CATEGORY_APPLICATION,
+                 "Unable to load texture! ERROR: %s", SDL_GetError());
     return;
   }
 }
