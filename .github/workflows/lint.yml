@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt-get install clang-format
+      - run: |
+          sudo apt update
+          sudo apt upgrade
+          sudo apt install clang-format
       - run: clang-format --version
       - run: |
           make lint
