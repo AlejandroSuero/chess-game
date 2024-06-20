@@ -19,8 +19,7 @@ std::vector<std::string> FEN::parse(const std::string &fen)
 std::vector<std::string> FEN::get_initial_positions()
 {
   std::vector<std::string> initial_positions;
-  std::string initial_position =
-      "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+  std::string initial_position = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
   initial_positions = parse(initial_position);
   return initial_positions;
 }
