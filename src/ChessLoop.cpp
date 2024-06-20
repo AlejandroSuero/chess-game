@@ -4,6 +4,7 @@
 void Chess::Run()
 {
   SDL_Handler handler;
+  handler.render_background();
   while (handler.handling_events)
   {
     handler.handle_events();
