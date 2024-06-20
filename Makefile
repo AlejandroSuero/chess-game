@@ -40,13 +40,13 @@ clean:
 
 lint:
 	@$(call style_calls, "Running clang-format")
-	@clang-format -n -Werror -style=file -i src/*.cpp
+	@clang-format -n -Werror -ferror-limit=0 -style=file -i src/*.cpp src/*.h
 	@$(call style_calls, "Done")
 .PHONY: lint
 
 format:
 	@$(call style_calls, "Running clang-format")
-	@clang-format -Werror -style=file -i src/*.cpp
+	@clang-format -Werror -style=file -style=file -i src/*.cpp src/*.h
 	@$(call style_calls, "Done")
 .PHONY: format
 
