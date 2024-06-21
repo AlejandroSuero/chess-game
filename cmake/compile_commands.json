@@ -1,25 +1,25 @@
 [
 {
   "directory": "/Users/aome/dev/c_projects/Chess/cmake/src",
-  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/Main.cpp.o -c /Users/aome/dev/c_projects/Chess/src/Main.cpp",
+  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -isystem /Library/Frameworks/SDL2_ttf.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/Main.cpp.o -c /Users/aome/dev/c_projects/Chess/src/Main.cpp",
   "file": "/Users/aome/dev/c_projects/Chess/src/Main.cpp",
   "output": "src/CMakeFiles/Chess.dir/Main.cpp.o"
 },
 {
   "directory": "/Users/aome/dev/c_projects/Chess/cmake/src",
-  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/ChessLoop.cpp.o -c /Users/aome/dev/c_projects/Chess/src/ChessLoop.cpp",
+  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -isystem /Library/Frameworks/SDL2_ttf.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/ChessLoop.cpp.o -c /Users/aome/dev/c_projects/Chess/src/ChessLoop.cpp",
   "file": "/Users/aome/dev/c_projects/Chess/src/ChessLoop.cpp",
   "output": "src/CMakeFiles/Chess.dir/ChessLoop.cpp.o"
 },
 {
   "directory": "/Users/aome/dev/c_projects/Chess/cmake/src",
-  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/SDL_Handler.cpp.o -c /Users/aome/dev/c_projects/Chess/src/SDL_Handler.cpp",
+  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -isystem /Library/Frameworks/SDL2_ttf.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/SDL_Handler.cpp.o -c /Users/aome/dev/c_projects/Chess/src/SDL_Handler.cpp",
   "file": "/Users/aome/dev/c_projects/Chess/src/SDL_Handler.cpp",
   "output": "src/CMakeFiles/Chess.dir/SDL_Handler.cpp.o"
 },
 {
   "directory": "/Users/aome/dev/c_projects/Chess/cmake/src",
-  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/FEN.cpp.o -c /Users/aome/dev/c_projects/Chess/src/FEN.cpp",
+  "command": "/usr/bin/g++ -DSOME_DEFINITION -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers -isystem /Library/Frameworks/SDL2_ttf.framework/Headers -Wall -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -F /Library/Frameworks/ -F /Library/Frameworks/ -o CMakeFiles/Chess.dir/FEN.cpp.o -c /Users/aome/dev/c_projects/Chess/src/FEN.cpp",
   "file": "/Users/aome/dev/c_projects/Chess/src/FEN.cpp",
   "output": "src/CMakeFiles/Chess.dir/FEN.cpp.o"
 }

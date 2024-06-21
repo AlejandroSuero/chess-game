@@ -10,4 +10,4 @@ endif (WIN32)
 
 add_executable(${PROJECT_NAME} Main.cpp ${CHESS_SOURCES})
 
-target_link_libraries(${PROJECT_NAME} SDL2::SDL2 SDL2::SDL2main SDL2_image::SDL2_image)
+target_link_libraries(${PROJECT_NAME} SDL2::SDL2 SDL2::SDL2main SDL2_image::SDL2_image SDL2_ttf::SDL2_ttf)
